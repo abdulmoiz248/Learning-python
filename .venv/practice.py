@@ -54,7 +54,7 @@ list.append('Lol')
 print(9 in list)
 list.sort()
 print(list)
-'''
+
 def sum_file():
     str=open('practice.txt')
     for line in str:
@@ -71,8 +71,36 @@ def write_To_file(sum):
     str.write(sum)
 
 #sum_file()
-write_To_file('sum')
+#write_To_file('sum')
+'''
 
+fruit=dict()
+fruit[1]='Banana'
+fruit['Apple']=2
+fruit['Mango']=3
+fruit['Melon']=4
+
+#print(fruit['Mango'])
+#print(fruit)
+x=fruit.get('Melon')
+print(x)
+
+def find_repeat_name():
+    file=open('practice.txt')
+    names=dict()
+    for name in file:
+        '''
+        if names.__contains__(name):
+            names[name]=names[name]+1
+            continue
+        names[name]=1
+        
+        '''
+#alterante approach
+        names[name] = names.get(name, 0) + 1
+    print(names)
+
+#find_repeat_name()
 
 
 
