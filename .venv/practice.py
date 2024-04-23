@@ -72,7 +72,7 @@ def write_To_file(sum):
 
 #sum_file()
 #write_To_file('sum')
-'''
+
 
 fruit=dict()
 fruit[1]='Banana'
@@ -89,18 +89,35 @@ def find_repeat_name():
     file=open('practice.txt')
     names=dict()
     for name in file:
-        '''
-        if names.__contains__(name):
-            names[name]=names[name]+1
-            continue
-        names[name]=1
         
-        '''
+      #  if names.__contains__(name):
+       #     names[name]=names[name]+1
+        #    continue
+       # names[name]=1
+        
+        
 #alterante approach
         names[name] = names.get(name, 0) + 1
     print(names)
 
 #find_repeat_name()
 
+def find_number_of_words():
+    line =input('Enter a Statement:')
+    count=dict()
+    for word in line.split():
+         count[word]=count.get(word,0)+1
+    print(count)
 
+#find_number_of_words()
+
+names=dict()
+names['Abdul']=1
+names['Moiz']=2
+names['Maryam']=3
+names['Wahb']=4
+
+for name,id in names.items():
+    print(name,id)
+'''
 
